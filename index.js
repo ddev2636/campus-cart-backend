@@ -6,6 +6,7 @@ dotenv.config();
 import "express-async-errors";
 import bodyParser from "body-parser";
 import path from "path";
+import cors from "cors";
 import { fileURLToPath } from "url";
 
 //importing middlewares
