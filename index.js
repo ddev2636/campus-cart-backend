@@ -25,6 +25,7 @@ app.use(bodyParser.json({ limit: "50mb" }));
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+app.use(cors());
 
 // Set EJS as templating engine
 // app.set("view engine", "ejs");
@@ -61,14 +62,14 @@ const __dirname = path.dirname(__filename);
 //   });
 // });
 
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+//app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/item", thingRouter);
 app.use("/api/v1/stripe", stripeRouter);
 
-app.use(notFoundMiddlware);
-app.use(errorHandlerMiddleware);
+// app.use(notFoundMiddlware);
+//app.use(errorHandlerMiddleware);
 
 const port = process.env.PORT || 5000;
 
