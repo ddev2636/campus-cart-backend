@@ -63,7 +63,7 @@ app.use(cors());
 //   });
 // });
 
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+//app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/item", thingRouter);
