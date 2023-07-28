@@ -69,8 +69,8 @@ app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/item", thingRouter);
 app.use("/api/v1/stripe", stripeRouter);
 
-// app.use(notFoundMiddlware);
-//app.use(errorHandlerMiddleware);
+app.use(notFoundMiddlware);
+app.use(errorHandlerMiddleware);
 
 const port = process.env.PORT || 5000;
 
